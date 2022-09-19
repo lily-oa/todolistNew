@@ -75,7 +75,6 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
-$color_light_black:  rgba(#333333, 30%);
 $color_dark_gray: #9F9A91;
 $color_gray: #efefef;
 // scss-docs-end theme-color-variables
@@ -90,7 +89,6 @@ $theme-colors: (
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark,
-  "color_light_black":  $color_light_black,
   "$color_dark_gray": #9F9A91,
   "$color_gray": #efefef
 ) !default;
