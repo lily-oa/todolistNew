@@ -12426,7 +12426,10 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: 1.5;
-  background: #FCD370;
+  min-height: 100vh;
+  background-image: -o-linear-gradient(276deg, #ffd370 2%, #ffd370 46%, #fff 46%, #fff 100%, #e8e8e8 100%);
+  background-image: linear-gradient(174deg, #ffd370 2%, #ffd370 46%, #fff 46%, #fff 100%, #e8e8e8 100%);
+  letter-spacing: 0.07em;
 }
 
 /*-- pages --*/
