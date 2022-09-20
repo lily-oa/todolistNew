@@ -12434,6 +12434,7 @@ body {
 /*-- pages --*/
 .todolist {
   max-width: 500px;
+  margin: 48px auto opx auto;
 }
 
 /*# sourceMappingURL=all.css.map */
