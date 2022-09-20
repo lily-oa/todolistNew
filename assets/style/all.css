@@ -12434,7 +12434,9 @@ body {
 /*-- pages --*/
 .todolist {
   max-width: 500px;
-  margin: 48px auto opx auto;
+  margin: 48px auto 24px auto;
+  padding: 0 12px;
+  width: 500px;
 }
 
 .todolist h1, .todolist .h1 {
