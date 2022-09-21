@@ -29,6 +29,23 @@
       width: 90%;
       letter-spacing: 0.7px;
     }
+    .add{
+      width: 40px;
+      height: 40px;
+      background-color: $secondary;
+      margin: 4px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 32px;
+      color: white;
+      position: absolute;
+      p{
+        position: absolute;
+        top: 0;
+        left: 11px;
+        vertical-align: top;
+      }
+    }
   }
 }
 
