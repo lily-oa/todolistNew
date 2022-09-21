@@ -12474,4 +12474,23 @@ body {
   letter-spacing: 0.7px;
 }
 
+.todolist .top .add {
+  width: 40px;
+  height: 40px;
+  background-color: #333333;
+  margin: 4px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 32px;
+  color: white;
+  position: absolute;
+}
+
+.todolist .top .add p {
+  position: absolute;
+  top: 0;
+  left: 11px;
+  vertical-align: top;
+}
+
 /*# sourceMappingURL=all.css.map */
