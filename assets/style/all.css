@@ -12487,9 +12487,24 @@ body {
 
 .todolist .top .add p {
   position: absolute;
-  top: 0;
+  top: -7px;
   left: 11px;
-  vertical-align: top;
+  vertical-align: middle;
+}
+
+.todolist .bottom {
+  margin-top: 10px;
+  margin-bottom: 92px;
+  background-color: #fff;
+  -webkit-box-shadow: 0, 5px, 15px, 0, rgba(0, 0, 0, 0.15);
+          box-shadow: 0, 5px, 15px, 0, rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.todolist .bottom ul.categor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /*# sourceMappingURL=all.css.map */
