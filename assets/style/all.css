@@ -12496,15 +12496,32 @@ body {
   margin-top: 10px;
   margin-bottom: 92px;
   background-color: #fff;
-  -webkit-box-shadow: 0, 5px, 15px, 0, rgba(0, 0, 0, 0.15);
-          box-shadow: 0, 5px, 15px, 0, rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   border-radius: 10px;
 }
 
-.todolist .bottom ul.categor {
+.todolist .bottom ul.category {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.todolist .bottom ul.category li {
+  width: calc(100% / 3);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500px;
+  color: #333333;
+  letter-spacing: 0.7px;
+  padding: 16px 0px;
+  border-bottom: solid 2px #efefef;
+  color: #9F9A91;
+}
+
+.todolist .bottom ul.category .bb-1 {
+  border-bottom: solid 2px #333333;
+  color: #333333;
 }
 
 /*# sourceMappingURL=all.css.map */
