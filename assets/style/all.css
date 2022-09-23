@@ -12436,7 +12436,6 @@ body {
   max-width: 500px;
   margin: 48px auto 24px auto;
   padding: 0 12px;
-  width: 500px;
 }
 
 .todolist h1, .todolist .h1 {
@@ -12483,7 +12482,7 @@ body {
   cursor: pointer;
   font-size: 32px;
   color: white;
-  position: absolute;
+  position: relative;
 }
 
 .todolist .top .add p {
