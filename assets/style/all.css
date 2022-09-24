@@ -12537,7 +12537,7 @@ body {
   padding-bottom: 17px;
 }
 
-.todolist .bottom ul.list li:hover img {
+.todolist .bottom ul.list li:hover img img {
   opacity: 1;
 }
 
