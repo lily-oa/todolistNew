@@ -12524,4 +12524,21 @@ body {
   color: #333333;
 }
 
+.todolist .bottom ul.list {
+  margin-top: 24.5px;
+}
+
+.todolist .bottom ul.list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 460px;
+  margin: 0px 16px 16px 24px;
+  padding-bottom: 17px;
+}
+
+.todolist .bottom ul.list li:hover img {
+  opacity: 1;
+}
+
 /*# sourceMappingURL=all.css.map */
