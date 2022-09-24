@@ -71,7 +71,18 @@
       }
     }
     ul.list{
-      
+      margin-top: 24.5px;
+      li{
+        display: flex;
+        width: 460px;
+        margin: 0px 16px 16px 24px;
+        padding-bottom: 17px;
+        &:hover{
+          img{
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 }
