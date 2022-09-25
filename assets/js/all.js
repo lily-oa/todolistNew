@@ -27,8 +27,44 @@ var list = document.querySelector('.list'); // 初始值
 function renderData() {
   var str = '';
   data.forEach(function (item, index) {
-    var to_be_completed_html = "\n    <li>\n        <div class='checkbox' data-num=".concat(index, "></div>\n        <h2 class=\"clear me-auto\">").concat(item.content, "</h2>\n        <img class=\"del\" data-num=").concat(index, " src='https://hexschool.github.io/js-todo/assets/cancel.jpg'/>\n      </li>\n    ");
+    var to_be_completed_html = "\n    <li>\n        <div class='checkbox' data-num=".concat(index, "></div>\n        <h2 class=\"me-auto\">").concat(item.content, "</h2>\n        <img class=\"del\" data-num=").concat(index, " src='https://hexschool.github.io/js-todo/assets/cancel.jpg'/>\n    </li>\n    ");
     var completed_html = "\n    <li>\n        <div class=\"checkbox done\" >\n            <div class=\"material-icons\" data-num=".concat(index, ">done</div>\n        </div>\n        <h2 class=\"clear\">").concat(item.content, "</h2>\n        <img class=\"del\" data-num=").concat(index, " src=\"https://hexschool.github.io/js-todo/assets/cancel.jpg\"/>\n    </li>\n    ");
+
+    if (item.done == false) {
+      str += to_be_completed_html;
+    } else {
+      str += completed_html;
+    }
   });
+  list.innerHTML = str;
 }
+
+renderData(); //toBeCompleteNum();
+// 篩選器
+
+var category = document.querySelector('.category');
+var all = document.querySelector('.all');
+var toBeComplete = document.querySelector('.to_be_completed');
+var completed = document.querySelector('.completed');
+category.addEventListener('click', function (e) {
+  var str = '';
+  data.forEach(function (item, index) {
+    var to_be_completed_html = "\n    <li>\n        <div class='checkbox' data-num=".concat(index, "></div>\n        <h2 class=\"me-auto\">").concat(item.content, "</h2>\n        <img class=\"del\" data-num=").concat(index, " src='https://hexschool.github.io/js-todo/assets/cancel.jpg'/>\n    </li>\n    ");
+    var completed_html = "\n    <li>\n        <div class=\"checkbox done\" >\n            <div class=\"material-icons\" data-num=".concat(index, ">done</div>\n        </div>\n        <h2 class=\"clear\">").concat(item.content, "</h2>\n        <img class=\"del\" data-num=").concat(index, " src=\"https://hexschool.github.io/js-todo/assets/cancel.jpg\"/>\n    </li>\n    ");
+
+    if (e.target.getAttribute('class') == 'all bb-1') {
+      if (item.done == false) {
+        str += to_be_completed_html;
+      } else {
+        str += completed_html;
+      }
+    } else {
+      if (e.target.getAttribute('class') == 'to_be_completed' || e.target.getAttribute('class') == 'to_be_completed bb-1' && item.done == 'true') {
+        str += completed_html;
+      }
+    }
+
+    list.innerHTML = str;
+  });
+}); // 篩選底線
 //# sourceMappingURL=all.js.map
