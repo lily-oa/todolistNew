@@ -12604,4 +12604,23 @@ body {
   cursor: pointer;
 }
 
+.todolist .bottom ul.summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 8px 47px 0px 24px;
+  padding-bottom: 32px;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  color: #333333;
+}
+
+.todolist .bottom ul.summary .clear {
+  cursor: pointer;
+  color: #9F9A91;
+}
+
 /*# sourceMappingURL=all.css.map */
