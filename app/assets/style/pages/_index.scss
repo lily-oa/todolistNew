@@ -74,16 +74,26 @@
       margin-top: 24.5px;
       li{
         display: flex;
-        width: 460px;
+        width: 425px;
         margin: 0px 16px 16px 24px;
         padding-bottom: 17px;
-        &:hover img{
-          img{
+        img{
+          opacity: 0.1;
+          cursor: pointer;
+          margin-left: 16px;
+          &:hover{
             opacity: 1;
           }
+        }
+        .checkbox{
+          width: 20px;
+          height: 20px;
+          margin-right: 16px;
+          border-radius: 5px;
+          border: 1px solid $secondary;
+          cursor: pointer;
         }
       }
     }
   }
 }
-
