@@ -12556,4 +12556,52 @@ body {
   cursor: pointer;
 }
 
+.todolist .bottom ul.list li .checkbox .material-icons {
+  font-size: 18px;
+  font-weight: 600;
+  color: #FCD370;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin-right: 16px;
+  opacity: 0;
+}
+
+.todolist .bottom ul.list li .done {
+  border: none;
+}
+
+.todolist .bottom ul.list li .done .material-icons {
+  opacity: 1;
+}
+
+.todolist .bottom ul.list li h2, .todolist .bottom ul.list li .h2 {
+  font-size: 16px;
+  color: #333333;
+  letter-spacing: 0.62px;
+  width: 392px;
+  border-bottom: solid 1px #efefef;
+  padding-bottom: 17px;
+}
+
+@media screen and (max-width: 500px) {
+  .todolist .bottom ul.list li h2, .todolist .bottom ul.list li .h2 {
+    width: 50%;
+  }
+}
+
+.todolist .bottom ul.list li .clear {
+  color: rgba(51, 51, 51, 0.3);
+  text-decoration: line-through;
+}
+
+.todolist .bottom ul.list li img {
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  text-align: center;
+  opacity: 0.1;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=all.css.map */
