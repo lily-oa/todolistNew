@@ -12532,13 +12532,28 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 460px;
+  width: 425px;
   margin: 0px 16px 16px 24px;
   padding-bottom: 17px;
 }
 
-.todolist .bottom ul.list li:hover img img {
+.todolist .bottom ul.list li img {
+  opacity: 0.1;
+  cursor: pointer;
+  margin-left: 16px;
+}
+
+.todolist .bottom ul.list li img:hover {
   opacity: 1;
+}
+
+.todolist .bottom ul.list li .checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+  border-radius: 5px;
+  border: 1px solid #333333;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=all.css.map */
