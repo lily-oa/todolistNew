@@ -97,12 +97,17 @@ category.addEventListener('click', function(e){
     }else{
       if(
         e.target.getAttribute('class') == 'to_be_completed' || 
-        (e.target.getAttribute('class') == 'to_be_completed bb-1' && item.done == 'true')
+        (e.target.getAttribute('class') == 'to_be_completed bb-1' && item.done == false)
+      ){
+        str += completed_html;
+      }else if(
+        e.target.getAttribute('class') == 'completed' ||
+        (e.target.getAttribute('class') == 'completed bb-1' && item.done == true)
       ){
         str += completed_html;
       }
     }
-    list.innerHTML = str;
+    MediaList.innerHTML = str;
   });
 });
 
