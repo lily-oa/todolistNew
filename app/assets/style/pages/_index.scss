@@ -135,7 +135,17 @@
       }
     }
     ul.summary{
-      
+      display: flex;
+      justify-content: space-between;
+      margin: 8px 47px 0px 24px;
+      padding-bottom: 32px;
+      font-size: 14px;
+      letter-spacing: 0.7px;
+      color: $secondary;
+      .clear{
+        cursor: pointer;
+        color: $color_dark_gray;
+      }
     }
   }
 }
