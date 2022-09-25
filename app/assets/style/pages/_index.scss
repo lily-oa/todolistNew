@@ -92,8 +92,50 @@
           border-radius: 5px;
           border: 1px solid $secondary;
           cursor: pointer;
+          .material-icons{
+            font-size: 18px;
+            font-weight: 600;
+            color: $primary;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            margin-right: 16px;
+            opacity: 0;
+          }
+        }
+        .done{
+          border: none;
+          .material-icons{
+            opacity: 1;
+          }
+        }
+        h2{
+          font-size: 16px;
+          color: $secondary;
+          letter-spacing: 0.62px;
+          width: 392px;
+          border-bottom: solid 1px $color_gray;
+          padding-bottom: 17px;
+          @media screen and(max-width: 500px) {
+            width: 50%;
+          }
+        }
+        .clear{
+          color: rgba(#333333, 0.3);
+          text-decoration: line-through;
+        }
+        img{
+          width: 16px;
+          height: 16px;
+          margin-left: 16px;
+          text-align: center;
+          opacity: 0.1;
+          cursor: pointer;
         }
       }
+    }
+    ul.summary{
+      
     }
   }
 }
