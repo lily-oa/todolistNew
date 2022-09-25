@@ -38,9 +38,9 @@ function renderData(){
     let to_be_completed_html = `
     <li>
         <div class='checkbox' data-num=${index}></div>
-        <h2 class="clear me-auto">${item.content}</h2>
+        <h2 class="me-auto">${item.content}</h2>
         <img class="del" data-num=${index} src='https://hexschool.github.io/js-todo/assets/cancel.jpg'/>
-      </li>
+    </li>
     `;
     let completed_html = `
     <li>
@@ -51,5 +51,59 @@ function renderData(){
         <img class="del" data-num=${index} src="https://hexschool.github.io/js-todo/assets/cancel.jpg"/>
     </li>
     `;
+    if(item.done == false){
+      str += to_be_completed_html;
+    }else{
+      str += completed_html;
+    }
   });
+  list.innerHTML = str;
 }
+renderData();
+//toBeCompleteNum();
+
+// 篩選器
+const category = document.querySelector('.category');
+const all = document.querySelector('.all');
+const toBeComplete = document.querySelector('.to_be_completed');
+const completed = document.querySelector('.completed');
+
+category.addEventListener('click', function(e){
+  let str = '';
+  data.forEach(function(item, index){
+    let to_be_completed_html = `
+    <li>
+        <div class='checkbox' data-num=${index}></div>
+        <h2 class="me-auto">${item.content}</h2>
+        <img class="del" data-num=${index} src='https://hexschool.github.io/js-todo/assets/cancel.jpg'/>
+    </li>
+    `;
+    let completed_html = `
+    <li>
+        <div class="checkbox done" >
+            <div class="material-icons" data-num=${index}>done</div>
+        </div>
+        <h2 class="clear">${item.content}</h2>
+        <img class="del" data-num=${index} src="https://hexschool.github.io/js-todo/assets/cancel.jpg"/>
+    </li>
+    `;
+
+    if(e.target.getAttribute('class') == 'all bb-1'){
+      if(item.done == false){
+        str += to_be_completed_html;
+      }else{
+        str += completed_html;
+      }
+    }else{
+      if(
+        e.target.getAttribute('class') == 'to_be_completed' || 
+        (e.target.getAttribute('class') == 'to_be_completed bb-1' && item.done == 'true')
+      ){
+        str += completed_html;
+      }
+    }
+    list.innerHTML = str;
+  });
+});
+
+// 篩選底線
