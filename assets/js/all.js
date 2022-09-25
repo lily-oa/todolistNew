@@ -60,13 +60,13 @@ category.addEventListener('click', function (e) {
       }
     } else {
       if (e.target.getAttribute('class') == 'to_be_completed' || e.target.getAttribute('class') == 'to_be_completed bb-1' && item.done == false) {
-        str += completed_html;
+        str += to_be_completed_html;
       } else if (e.target.getAttribute('class') == 'completed' || e.target.getAttribute('class') == 'completed bb-1' && item.done == true) {
         str += completed_html;
       }
     }
 
-    MediaList.innerHTML = str;
+    list.innerHTML = str;
   });
 }); // 篩選底線
 //# sourceMappingURL=all.js.map
