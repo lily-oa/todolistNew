@@ -81,6 +81,22 @@ function categoryLiBottom() {
 } //新增代辦事項 
 
 
-var addList = document.querySelector('.top');
+var addlist = document.querySelector('.top');
 var txt = document.querySelector('.txt');
+addlist.addEventListener('click', function (e) {
+  if (e.target.nodeName !== 'p' || txt.value == '') {
+    return;
+  }
+
+  categoryLiBottom();
+  var obj = {};
+  obj.content = txt.value;
+  obj.done = false;
+  data.push(obj);
+  renderData();
+  txt.value = ''; // toBeCompletedNum();
+}); //刪除待辦事項
+//待辦事項總數
+
+function toBeCompleteNum() {}
 //# sourceMappingURL=all.js.map
