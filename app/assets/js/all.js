@@ -127,7 +127,7 @@ const addlist = document.querySelector('.top');
 const txt = document.querySelector('.txt');
 
 addlist.addEventListener('click', function(e){
-  if(e.target.nodeName !== 'p' || txt.value == ''){
+  if(e.target.nodeName !== 'P' || txt.value == ''){
     return;
   }
   categoryLiBottom();
