@@ -113,4 +113,6 @@ function toBeCompleteNum() {
     summary.innerHTML = newSummaryHTML;
   });
 }
+
+;
 //# sourceMappingURL=all.js.map
