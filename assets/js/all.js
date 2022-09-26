@@ -69,4 +69,18 @@ category.addEventListener('click', function (e) {
     list.innerHTML = str;
   });
 }); // 篩選底線
+
+$('.category>li').click(function () {
+  $('li').removeClass('bb-1');
+  $(this).addClass('bb-1');
+});
+
+function categoryLiBottom() {
+  $('.category>li').removeClass('bb-1');
+  $('.category>.all').addClass('bb-1');
+} //新增代辦事項 
+
+
+var addList = document.querySelector('.top');
+var txt = document.querySelector('.txt');
 //# sourceMappingURL=all.js.map
