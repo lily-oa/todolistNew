@@ -39,8 +39,8 @@ function renderData() {
   list.innerHTML = str;
 }
 
-renderData(); //toBeCompleteNum();
-// 篩選器
+renderData();
+toBeCompleteNum(); // 篩選器
 
 var category = document.querySelector('.category');
 var all = document.querySelector('.all');
@@ -94,9 +94,23 @@ addlist.addEventListener('click', function (e) {
   obj.done = false;
   data.push(obj);
   renderData();
-  txt.value = ''; // toBeCompletedNum();
+  txt.value = '';
+  toBeCompletedNum();
 }); //刪除待辦事項
 //待辦事項總數
 
-function toBeCompleteNum() {}
+function toBeCompleteNum() {
+  var toBeCompletedNum = 0;
+  data.forEach(function (item, index) {
+    if (item.done == false) {
+      toBeCompleteNum += 1;
+    } // add .summaryHTML
+
+
+    var summary = document.querySelector('.summary');
+    var newSummaryHTML = '';
+    newSummaryHTML = "\n    <li class=\"todoitems\">".concat(toBeCompletedNum, "\u500B\u5F85\u5B8C\u6210\u9805\u76EE</li>\n      <li class=\"clear\">\u6E05\u9664\u5DF2\u5B8C\u6210\u9805\u76EE</li>\n    ");
+    summary.innerHTML = newSummaryHTML;
+  });
+}
 //# sourceMappingURL=all.js.map
