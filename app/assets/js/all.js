@@ -123,5 +123,27 @@ function categoryLiBottom(){
 }
 
 //新增代辦事項 
-const addList = document.querySelector('.top');
-const txt = document.querySelector('.txt')
+const addlist = document.querySelector('.top');
+const txt = document.querySelector('.txt');
+
+addlist.addEventListener('click', function(e){
+  if(e.target.nodeName !== 'p' || txt.value == ''){
+    return;
+  }
+  categoryLiBottom();
+  let obj = {};
+  obj.content = txt.value;
+  obj.done = false;
+  data.push(obj);
+  renderData();
+  txt.value = '';
+  // toBeCompletedNum();
+});
+
+//刪除待辦事項
+
+
+//待辦事項總數
+function toBeCompleteNum(){
+  
+}
