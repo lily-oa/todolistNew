@@ -143,6 +143,11 @@ addlist.addEventListener('click', function(e){
 //刪除待辦事項
 
 
+
+
+
+
+
 //待辦事項總數
 function toBeCompleteNum(){
   let toBeCompletedNum = 0;
@@ -159,4 +164,5 @@ function toBeCompleteNum(){
     `
     summary.innerHTML = newSummaryHTML;
   });
-}
+};
+
