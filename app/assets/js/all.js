@@ -60,7 +60,7 @@ function renderData(){
   list.innerHTML = str;
 }
 renderData();
-//toBeCompleteNum();
+toBeCompleteNum();
 
 // 篩選器
 const category = document.querySelector('.category');
@@ -137,7 +137,7 @@ addlist.addEventListener('click', function(e){
   data.push(obj);
   renderData();
   txt.value = '';
-  // toBeCompletedNum();
+  toBeCompletedNum();
 });
 
 //刪除待辦事項
@@ -145,5 +145,18 @@ addlist.addEventListener('click', function(e){
 
 //待辦事項總數
 function toBeCompleteNum(){
-  
+  let toBeCompletedNum = 0;
+  data.forEach(function(item, index){
+    if(item.done == false){
+      toBeCompleteNum += 1;
+    }
+    // add .summaryHTML
+    const summary = document.querySelector('.summary');
+    let newSummaryHTML = '';
+    newSummaryHTML = `
+    <li class="todoitems">${toBeCompletedNum}個待完成項目</li>
+      <li class="clear">清除已完成項目</li>
+    `
+    summary.innerHTML = newSummaryHTML;
+  });
 }
