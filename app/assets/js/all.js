@@ -164,8 +164,6 @@ list.addEventListener('click', function(e){
 });
 
 
-
-
 //待辦事項總數
 function toBeCompletedNum(){
   let toBeCompleteNum = 0;
@@ -211,3 +209,12 @@ summary.addEventListener('click', function(e){
     }
   });
 });
+
+
+// ------------------------------try
+const arr = [1, 7, 99];
+const newArr = arr.filter(function(item){
+  return item >= 5;
+  
+});
+console.log(newArr);
