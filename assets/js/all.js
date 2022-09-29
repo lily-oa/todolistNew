@@ -160,11 +160,5 @@ summary.addEventListener('click', function (e) {
       renderData();
     }
   });
-}); // ------------------------------try
-
-var arr = [1, 7, 99];
-var newArr = arr.filter(function (item) {
-  return item >= 5;
 });
-console.log(newArr);
 //# sourceMappingURL=all.js.map
