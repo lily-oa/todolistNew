@@ -158,7 +158,7 @@ list.addEventListener('click', function(e){
     return;
   }
   categoryLiBottom();
-  data[e.target.getAttribute('data-num')].done =!data[e.target.getAttribute('data-num')].done;
+  data[e.target.getAttribute('data-num')].done =! data[e.target.getAttribute('data-num')].done;
   renderData();
   toBeCompletedNum();
 });
@@ -211,10 +211,3 @@ summary.addEventListener('click', function(e){
 });
 
 
-// ------------------------------try
-const arr = [1, 7, 99];
-const newArr = arr.filter(function(item){
-  return item >= 5;
-  
-});
-console.log(newArr);
