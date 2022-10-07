@@ -65,8 +65,8 @@ toBeCompletedNum();
 // 篩選器
 const category = document.querySelector('.category');
 const all = document.querySelector('.all');
-const toBeComplete = document.querySelector('.to_be_completed');
-const completed = document.querySelector('.completed');
+const toBeComplete = document.querySelector('.to_be_completed');  //未完成
+const completed = document.querySelector('.completed');           //已完成
 
 category.addEventListener('click', function(e){
   let str = '';
@@ -89,12 +89,14 @@ category.addEventListener('click', function(e){
     `;
 
     if(e.target.getAttribute('class') == 'all bb-1'){
+      // 這裡是all 類別裡 li的表現方式
       if(item.done == false){
         str += to_be_completed_html;
       }else{
         str += completed_html;
       }
     }else{
+      // 而這是真正的分類，將li 分成 待完成 和 已完成 並各自加入它們的所屬類別裡
       if(
         e.target.getAttribute('class') == 'to_be_completed' || 
         (e.target.getAttribute('class') == 'to_be_completed bb-1' && item.done == false)
@@ -158,7 +160,7 @@ list.addEventListener('click', function(e){
     return;
   }
   categoryLiBottom();
-  data[e.target.getAttribute('data-num')].done =! data[e.target.getAttribute('data-num')].done;
+  data[e.target.getAttribute('data-num')].done =! data[e.target.getAttribute('data-num')].done;// 以上的程式碼用意: 反轉 done 屬性的狀態，原本是 true 就改成 false，原本是 false 就改成 true
   renderData();
   toBeCompletedNum();
 });
