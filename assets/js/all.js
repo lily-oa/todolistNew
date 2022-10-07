@@ -156,6 +156,7 @@ summary.addEventListener('click', function (e) {
   data.filter(function (item, num) {
     if (item.done == true) {
       count = num;
+      console.log(count);
     }
   });
   data.forEach(function (item, index) {
