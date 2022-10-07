@@ -44,8 +44,10 @@ toBeCompletedNum(); // 篩選器
 
 var category = document.querySelector('.category');
 var all = document.querySelector('.all');
-var toBeComplete = document.querySelector('.to_be_completed');
-var completed = document.querySelector('.completed');
+var toBeComplete = document.querySelector('.to_be_completed'); //未完成
+
+var completed = document.querySelector('.completed'); //已完成
+
 category.addEventListener('click', function (e) {
   var str = '';
   data.forEach(function (item, index) {
@@ -53,12 +55,14 @@ category.addEventListener('click', function (e) {
     var completed_html = "\n    <li>\n        <div class=\"checkbox done\" >\n            <div class=\"material-icons\" data-num=".concat(index, ">done</div>\n        </div>\n        <h2 class=\"clear\">").concat(item.content, "</h2>\n        <img class=\"del\" data-num=").concat(index, " src=\"https://hexschool.github.io/js-todo/assets/cancel.jpg\"/>\n    </li>\n    ");
 
     if (e.target.getAttribute('class') == 'all bb-1') {
+      // 這裡是all 類別裡 li的表現方式
       if (item.done == false) {
         str += to_be_completed_html;
       } else {
         str += completed_html;
       }
     } else {
+      // 而這是真正的分類，將li 分成 待完成 和 已完成 並各自加入它們的所屬類別裡
       if (e.target.getAttribute('class') == 'to_be_completed' || e.target.getAttribute('class') == 'to_be_completed bb-1' && item.done == false) {
         str += to_be_completed_html;
       } else if (e.target.getAttribute('class') == 'completed' || e.target.getAttribute('class') == 'completed bb-1' && item.done == true) {
@@ -116,7 +120,8 @@ list.addEventListener('click', function (e) {
   }
 
   categoryLiBottom();
-  data[e.target.getAttribute('data-num')].done = !data[e.target.getAttribute('data-num')].done;
+  data[e.target.getAttribute('data-num')].done = !data[e.target.getAttribute('data-num')].done; // 以上的程式碼用意: 反轉 done 屬性的狀態，原本是 true 就改成 false，原本是 false 就改成 true
+
   renderData();
   toBeCompletedNum();
 }); //待辦事項總數
